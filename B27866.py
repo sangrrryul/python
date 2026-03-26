@@ -19,3 +19,15 @@ print(num1 * num22)
 print(num1 * num21)
 print(num1 * num2)
 
+a = int(input())
+b = input()
+
+print(a * int(b[2]))
+print(a * int(b[1]))
+print(a * int(b[0]))
+print(a * int(b))
+
+name = input()
+print(name)
+
+
