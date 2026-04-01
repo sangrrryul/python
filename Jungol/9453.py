@@ -1,14 +1,12 @@
 def func_plus(param):
-    print(f"{num} + 10 = {num+10})
+      return param +10
+
+def func_minus(param):
       return param -10
 
-    def minus ten(param):
-    print(f"{num}- 10 = {num-10})
-      return param -10
-
-num=int(input())
-print(num)
-ret1=func_plus(num)
-ret2=func_minus(num)
-print(f"{num} + 10 = {+10}")
-print(f"{num} - 10 = {-10}")
+inp = int(input())
+#print(inp)
+ret1 = func_plus(inp)
+ret2 = func_minus(inp)
+print(f"{inp} + 10 = {ret1}")
+print(f"{inp} - 10 = {ret2}")
