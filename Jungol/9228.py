@@ -20,3 +20,12 @@ score =int(input())
 print(score)
 result = ["PASS", "FAIL"]
 print(result[score >= 60])
+
+#9229 ----------------------------
+age = int(input())
+#print(age)
+
+if age >= 13:
+    print("Middle School")
+else:
+    print("Elementary School")
