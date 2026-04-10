@@ -1,4 +1,3 @@
-from statistics import median_grouped
 import oracledb
 
 # 데이터베이스 접속 정보 설정
@@ -20,7 +19,8 @@ class Person:
         self.deptno = deptno
 
     def print_person(self):
-        print(f"{self.empno} : {self.ename} :" )
+        print(f"{self.empno} : {self.ename} :")
+        
 
 def show_menu():
     print("-- 임직원 관리 시스템 --")
@@ -53,15 +53,13 @@ def search_emp():
 # SELECT 예제
     try:
         cursor.execute('''
-        SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO
-        FROM emp
-        order by empno''') #쿼리 실행. emp쿼리 모두 실행.
-        #for row in cursor:
-        #    print(row)
+            SELECT EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO 
+            FROM emp
+            ORDER BY EMPNO''')
         for row in cursor:
-           #p = Person(row)
-           p= print(row[0], row[1], row[2],row[3], row[4], row[5], row[6], row[7])
-           p.print_person()
+            # print(row)
+            p = Person(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
+            p.print_person()
     except oracledb.DatabaseError as e:
          print(f"Error fetching data: {e}")
 
